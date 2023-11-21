@@ -1,12 +1,12 @@
 # Float
 
-GitHub repository: github.com/Artem3348/Float
+GitHub repository: [github.com/Artem3348/Float](github.com/Artem3348/Float)
 
-NPM package: npmjs.org/package/...
+NPM package: [npmjs.org/package/myfloat](https://www.npmjs.com/package/myfloat)
 
 ## Install
 
-NPM: npm install ...
+NPM: npm install myfloat
 
 ## Usage
 

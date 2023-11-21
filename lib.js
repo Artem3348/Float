@@ -4,7 +4,7 @@ function getRandomInt(min, max) {
     return result;
 }
 
-export default function getRandomFloat(min, max) {
+function getRandomFloat(min, max) {
     let result = Math.random() * (max - min) + min;
     if (min === undefined) {
         result = Math.random() * getRandomInt(1, 1000);
@@ -13,7 +13,7 @@ export default function getRandomFloat(min, max) {
     return result;
 }
 
-export function isFloat(num) {
+function isFloat(num) {
     if (num % 1 === 0) {
         return false;
     } else {
@@ -21,7 +21,7 @@ export function isFloat(num) {
     }
 }
 
-export function likeFloat(inputValue) {
+function likeFloat(inputValue) {
     if (Number.isNaN(inputValue * 1)) {
         return false;
     }
@@ -30,4 +30,10 @@ export function likeFloat(inputValue) {
         return false;
     }
     return true;
+}
+
+module.exports = {
+    getRandomFloat,
+    isFloat,
+    likeFloat
 }

@@ -1,4 +1,4 @@
-import { getRandomFloat, isFloat, likeFloat } from "../lib.js";
+const { getRandomFloat, isFloat, likeFloat } = require('../lib.js');
 
 function Float(numberValue) {
     numberValue = numberValue ?? Float.random();
@@ -51,3 +51,14 @@ Float.prototype.equals = function (inputValue) {
 
     return false;
 };
+
+module.exports = {
+    float: Float,
+    random: Float.random,
+    is: Float.is,
+    like: Float.like,
+    toFixed: Float.prototype.toFixed,
+    toString: Float.prototype.toString,
+    valueOf: Float.prototype.valueOf,
+    equals: Float.prototype.equals,
+}
