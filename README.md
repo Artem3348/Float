@@ -80,7 +80,7 @@ float6.equal(1.5); // true
     - min (number)
     - max (number)
 
-  * Return:
+  * Returns:
     - number
 
 * Float.is(number);
@@ -90,7 +90,7 @@ float6.equal(1.5); // true
   * Parameters:
     - number (number)
 
-  * Return:
+  * Returns:
     - boolean
 
 * Float.like(value);

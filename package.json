@@ -4,18 +4,18 @@
     "description": "Float",
     "repository": {
       "type": "git",
-      "url": "https://github.com/Float.git"
+      "url": "https://github.com/Artem3348/Float"
     },
     "bugs": {
-        "url": "https://github.com/<REPO>/issues",
-        "email": "<EMAIL>"
+        "url": "https://github.com/Artem3348/Float/issues",
+        "email": "agatema@mail.ru"
     },
     "keywords": [
-      "<KEYWORD1>",
-      "<KEYWORD2>"
+      "Float",
+      "js"
     ],
-    "homepage": "<GITHUB_PAGE>#readme",
-    "author": "<NAME> <EMAIL>",
+    "homepage": "https://github.com/Artem3348/Float#readme",
+    "author": "Artem agatema@mail.ru",
     "license": "MIT",
     "private": false
   }
