@@ -1,4 +1,4 @@
-import { getRandomFloat, isFloat, likeFloat } from "./lib.js";
+import { getRandomFloat, isFloat, likeFloat } from "../lib.js";
 
 function Float(numberValue) {
     numberValue = numberValue ?? Float.random();

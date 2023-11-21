@@ -1,3 +1,21 @@
 {
-    "type": "module"
-}
+    "name": "Float",
+    "version": "1.0.0",
+    "description": "Float",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/Float.git"
+    },
+    "bugs": {
+        "url": "https://github.com/<REPO>/issues",
+        "email": "<EMAIL>"
+    },
+    "keywords": [
+      "<KEYWORD1>",
+      "<KEYWORD2>"
+    ],
+    "homepage": "<GITHUB_PAGE>#readme",
+    "author": "<NAME> <EMAIL>",
+    "license": "MIT",
+    "private": false
+  }
