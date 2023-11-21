@@ -51,14 +51,3 @@ Float.prototype.equals = function (inputValue) {
 
     return false;
 };
-
-module.exports = {
-    float: Float,
-    random: Float.random,
-    is: Float.is,
-    like: Float.like,
-    toFixed: Float.prototype.toFixed,
-    toString: Float.prototype.toString,
-    valueOf: Float.prototype.valueOf,
-    equals: Float.prototype.equals,
-}
