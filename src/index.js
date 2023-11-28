@@ -51,3 +51,7 @@ Float.prototype.equals = function (inputValue) {
 
     return false;
 };
+
+module.exports = {
+    Float
+}
