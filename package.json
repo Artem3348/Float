@@ -1,6 +1,6 @@
 {
     "name": "myfloat",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "Float",
     "repository": {
       "type": "git",
@@ -17,5 +17,6 @@
     "homepage": "https://github.com/Artem3348/Float#readme",
     "author": "Artem agatema@mail.ru",
     "license": "MIT",
-    "private": false
+    "private": false,
+    "main": "src/index.js"
   }
