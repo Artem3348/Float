@@ -1,6 +1,6 @@
 {
     "name": "myfloat",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "Float",
     "scripts": {
         "build": "webpack"
