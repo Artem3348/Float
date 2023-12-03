@@ -1,4 +1,4 @@
-const { getRandomFloat, isFloat, likeFloat } = require('../lib.js');
+const { getRandomFloat, isFloat, likeFloat } = require('../lib/lib.js');
 
 function Float(numberValue) {
     numberValue = numberValue ?? Float.random();

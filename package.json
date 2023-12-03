@@ -2,21 +2,30 @@
     "name": "myfloat",
     "version": "1.0.3",
     "description": "Float",
+    "scripts": {
+        "build": "webpack"
+    },
     "repository": {
-      "type": "git",
-      "url": "https://github.com/Artem3348/Float"
+        "type": "git",
+        "url": "https://github.com/Artem3348/Float"
     },
     "bugs": {
         "url": "https://github.com/Artem3348/Float/issues",
         "email": "agatema@mail.ru"
     },
     "keywords": [
-      "Float",
-      "js"
+        "Float",
+        "js"
     ],
     "homepage": "https://github.com/Artem3348/Float#readme",
     "author": "Artem agatema@mail.ru",
     "license": "MIT",
     "private": false,
-    "main": "src/index.js"
-  }
+    "main": "build/index.js",
+    "dependencies": {
+        "webpack": "^5.89.0"
+    },
+    "devDependencies": {
+        "webpack-cli": "^5.1.4"
+    }
+}
