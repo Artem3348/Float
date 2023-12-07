@@ -1,9 +1,60 @@
-/******/ (() => { // webpackBootstrap
-/******/ 	var __webpack_modules__ = ({
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory();
+	else if(typeof define === 'function' && define.amd)
+		define([], factory);
+	else {
+		var a = factory();
+		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
+	}
+})(this, () => {
+return /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
+/******/ 	// The require scope
+/******/ 	var __webpack_require__ = {};
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+var __webpack_exports__ = {};
 
-/***/ 546:
-/***/ ((module) => {
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "default": () => (/* binding */ Float)
+});
 
+// NAMESPACE OBJECT: ./lib/lib.js
+var lib_namespaceObject = {};
+__webpack_require__.r(lib_namespaceObject);
+
+;// CONCATENATED MODULE: ./lib/lib.js
 function getRandomInt(min, max) {
     let result = Math.floor(Math.random() * (max - min + 1)) + min;
 
@@ -38,18 +89,13 @@ function likeFloat(inputValue) {
     return true;
 }
 
-module.exports = {
+/* harmony default export */ const lib = ({
     getRandomFloat,
     isFloat,
     likeFloat
-}
+});
+;// CONCATENATED MODULE: ./src/index.js
 
-/***/ }),
-
-/***/ 138:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-const { getRandomFloat, isFloat, likeFloat } = __webpack_require__(546);
 
 function Float(numberValue) {
     numberValue = numberValue ?? Float.random();
@@ -58,13 +104,13 @@ function Float(numberValue) {
     return numberValue;
 }
 
-Float.random = getRandomFloat;
+Float.random = lib_namespaceObject.getRandomFloat;
 
 Float.is = function (num) {
     if (num instanceof Float) {
         return true;
     }
-    if (typeof num === 'number' && isFloat(num)) {
+    if (typeof num === 'number' && (0,lib_namespaceObject.isFloat)(num)) {
         return true;
     }
 
@@ -75,7 +121,7 @@ Float.like = function (inputValue) {
     if (Float.is(inputValue)) {
         return true;
     }
-    if (likeFloat(inputValue)) {
+    if ((0,lib_namespaceObject.likeFloat)(inputValue)) {
         return true;
     }
 
@@ -102,45 +148,8 @@ Float.prototype.equals = function (inputValue) {
 
     return false;
 };
-
-module.exports = {
-    Float
-}
-
-/***/ })
-
-/******/ 	});
-/************************************************************************/
-/******/ 	// The module cache
-/******/ 	var __webpack_module_cache__ = {};
-/******/ 	
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/ 		// Check if module is in cache
-/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
-/******/ 		if (cachedModule !== undefined) {
-/******/ 			return cachedModule.exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = __webpack_module_cache__[moduleId] = {
-/******/ 			// no module.id needed
-/******/ 			// no module.loaded needed
-/******/ 			exports: {}
-/******/ 		};
-/******/ 	
-/******/ 		// Execute the module function
-/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
-/******/ 	
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/ 	
-/************************************************************************/
-/******/ 	
-/******/ 	// startup
-/******/ 	// Load entry module and return exports
-/******/ 	// This entry module is referenced by other modules so it can't be inlined
-/******/ 	var __webpack_exports__ = __webpack_require__(138);
-/******/ 	
+__webpack_exports__ = __webpack_exports__["default"];
+/******/ 	return __webpack_exports__;
 /******/ })()
 ;
+});
