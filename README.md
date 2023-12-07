@@ -8,6 +8,14 @@ NPM package: [npmjs.org/package/myfloat](https://www.npmjs.com/package/myfloat)
 
 NPM: npm install myfloat
 
+## Connect
+
+`<script>`: `<script src="https://unpkg.com/myfloat@1.0.5/build/index.js"></script>`
+
+`ESM`: `import Float from 'myfloat';`
+
+`CJS`: `const Float = require('myfloat);`
+
 ## Usage
 
 ```js
