@@ -6,77 +6,23 @@ NPM package: [npmjs.org/package/myfloat](https://www.npmjs.com/package/myfloat)
 
 ## Install
 
-NPM: npm install myfloat
-
-## Connect
-
-`<script>`: `<script src="https://unpkg.com/myfloat@1.0.5/build/index.js"></script>`
-
-`ESM`: `import Float from 'myfloat';`
-
-`CJS`: `const Float = require('myfloat);`
+NPM: `npm install myfloat`
 
 ## Usage
 
-```js
-const float = new Float();
-float // Float { value: random fraction number}
-float.value // random fraction number
-typeof float // "object"
+### Browser
 
-/* - - - - - - - - - - - - - 1 - - - - - - - - - - - - - */
+`<script src="https://unpkg.com/myfloat"></script>`
 
-const float1 = Float();
-float1 // random fraction number
-typeof float1 // "number"
+### Modules
 
-/* - - - - - - - - - - - - - 2 - - - - - - - - - - - - - */
+#### ESM
 
-const float2 = new Float(-1.7);
-float2 // Float { value: -1.7 }
-float2.value // -1.7
-typeof float2 // object
+`import Float from 'myfloat';`
 
-/* - - - - - - - - - - - - - 3 - - - - - - - - - - - - - */
+#### CJS
 
-const float3 = Float(1.7);
-float3 // 1.7
-typeof float3 // number
-
-/* - - - - - - - - - - - - - 4 - - - - - - - - - - - - - */
-
-const float4 = Float.random(20, 21);
-float4 // random fraction number between 20 & 21
-
-/* - - - - - - - - - - - - - 5 - - - - - - - - - - - - - */
-
-Float.is(123); // false
-Float.is("12.3"); // false
-Float.is("js"); // false
-Float.is("1.5.5"); // false
-
-Float.is(float); // true
-Float.is(float1); // true
-Float.is(float2); // true
-Float.is(float3); // true
-Float.is(float4); // true
-
-/* - - - - - - - - - - - - - 6 - - - - - - - - - - - - - */
-
-const float5 = new Float(1.234);
-float5.toFixed(); // Float { value: 1 }
-
-const float6 = Float.random(100, 500);
-float6.toFixed(2); // ~250.22
-
-/* - - - - - - - - - - - - - 7 - - - - - - - - - - - - - */
-
-const float6 = new Float(1.5);
-float6 + "kg"; // "1.5kg"
-float6 + 1; // 2.5
-float6 == 1.5; // true
-float6.equal(1.5); // true
-```
+`const Float = require('myfloat);`
 
 ## Documentation
 
@@ -91,6 +37,10 @@ float6.equal(1.5); // true
   * Returns:
     - number
 
+```js
+const float = Float.random(20, 21); // random fraction number between 20 & 21
+```
+
 * Float.is(number);
 
   * Checks if the passed number is a Float
@@ -100,6 +50,18 @@ float6.equal(1.5); // true
 
   * Returns:
     - boolean
+
+```js
+Float.is(123); // false
+Float.is("12.3"); // false
+Float.is("js"); // false
+Float.is("1.5.5"); // false
+
+Float.is(new Float()); // true
+Float.is(new Float(-1.7)); // true
+Float.is(Float(1.7)); // true
+Float.is(Float.random(20, 21)); // true
+```
 
 * Float.like(value);
 
@@ -111,6 +73,14 @@ float6.equal(1.5); // true
   * Returns:
     - boolean
 
+```js
+Float.like(123); // false
+Float.like("js"); // false
+
+Float.like("12.3"); // true
+Float.like(12.3); // true
+```
+
 * Float.prototype.toFixed([digits]);
 
   * Similar to the Number.prototype.toFixed() method
@@ -121,6 +91,14 @@ float6.equal(1.5); // true
   * Returns:
     - object
 
+```js
+let float = new Float(1.234);
+float.toFixed(); // Float { value: 1 }
+
+let float1 = new Flaot(1.7545);
+float.toFixed(2) // Float { value: 1.75 }
+```
+
 * Float.prototype.equals(value);
 
   * Checks if the passed value is equal to Float.value
@@ -130,3 +108,8 @@ float6.equal(1.5); // true
 
   * Returns:
     - boolean
+
+```js
+let float = new Float(1.5);
+float.equal(1.5); // true
+```

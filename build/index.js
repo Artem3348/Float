@@ -3,10 +3,10 @@
 		module.exports = factory();
 	else if(typeof define === 'function' && define.amd)
 		define([], factory);
-	else {
-		var a = factory();
-		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
-	}
+	else if(typeof exports === 'object')
+		exports["myfloat"] = factory();
+	else
+		root["myfloat"] = factory();
 })(this, () => {
 return /******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
@@ -36,7 +36,7 @@ var __webpack_exports__ = {};
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "default": () => (/* binding */ Float)
+  "default": () => (/* binding */ src)
 });
 
 ;// CONCATENATED MODULE: ./lib/lib.js
@@ -129,6 +129,8 @@ Float.prototype.equals = function (inputValue) {
 
     return false;
 };
+
+/* harmony default export */ const src = (Float);
 __webpack_exports__ = __webpack_exports__["default"];
 /******/ 	return __webpack_exports__;
 /******/ })()
